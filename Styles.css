@@ -1,0 +1,196 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* Estilos para las cards */
+#Personajes {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#Personajes h2 {
+    margin-bottom: 20px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(20% - 10px); /* 5 tarjetas por fila en pantallas grandes */
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efecto de levantar la tarjeta */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2em; /* Tamaño de fuente más grande */
+    color: #333; /* Color de texto más oscuro */
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5; /* Mejor espaciado entre líneas */
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px; /* Botón más grande */
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Efecto de hover en el botón */
+}
+
+.card a:hover {
+    background-color: #555; /* Cambio de color al pasar el mouse */
+}
+
+/* Estilos para el footer */
+footer {
+    background-color: #444; /* Color de fondo distinto */
+    color: white;
+    text-align: left; /* Alineación del texto a la izquierda */
+    padding: 20px;
+    width: 100%;
+    margin-top: auto; /* Para que el footer se pegue al final */
+}
+
+footer h2 {
+    font-size: 1.5em; /* Título más grande */
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+footer p {
+    font-size: 16px; /* Texto más legible */
+    line-height: 1.6; /* Mejor espaciado entre líneas */
+    margin: 5px 0; /* Espaciado entre párrafos */
+}
+
+footer a {
+    color: #ffcc00; /* Color de enlace amarillo */
+    text-decoration: none;
+    font-weight: bold; /* Texto en negrita */
+    transition: color 0.3s ease; /* Efecto de hover */
+}
+
+footer a:hover {
+    color: #ff9900; /* Cambio de color al pasar el mouse */
+}
+
+/* Media queries para móviles */
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Más espacio entre tarjetas */
+    }
+
+    .card {
+        width: 90%; /* Tarjetas más anchas */
+        padding: 20px; /* Más espacio interno */
+    }
+
+    .card h3 {
+        font-size: 1.5em; /* Título más grande */
+    }
+
+    .card p {
+        font-size: 16px; /* Texto más legible */
+    }
+
+    .card a {
+        padding: 10px 20px; /* Botón más grande */
+        font-size: 16px; /* Texto del botón más grande */
+    }
+
+    /* Mejoras en el header para móviles */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Espacio entre elementos del menú */
+    }
+
+    nav ul li a {
+        font-size: 18px; /* Texto del menú más grande */
+    }
+
+    /* Mejoras en el footer para móviles */
+    footer {
+        padding: 20px 10px; /* Más espacio interno */
+    }
+
+    footer h2 {
+        font-size: 1.5em; /* Título más grande */
+    }
+
+    footer p {
+        font-size: 16px; /* Texto más legible */
+    }
+
+    footer a {
+        font-size: 16px; /* Enlaces más grandes */
+    }
+}
